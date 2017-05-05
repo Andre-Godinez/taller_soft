@@ -19,15 +19,23 @@
     <header id="header-container">
       <div class="container">
         <div class="row  flex-items-xs-between flex-items-xs-middle">
+            <!--
             <div class="col-xs-3 ">
               <h1>CelularesPeru</h1>
             </div>
+            -->
+
+            <div class="col-xs-3">
+              <img src="CelularesPeru/imagenes/calidad.png" alt="calidad" class="img-fluid">
+              <h1>Calidad</h1>
+            </div>
+
              <div class="col-xs-3 text-xs-right">
               <button class="navbar-toggler  hidden-sm-up" data-toggle="collapse" data-target="#navMenu">&#9776;</button>
               
                 @if (Auth::guest())
                     
-                            <a class="login hidden-xs-down text-uppercase font-weigth-bold" href="{{ url('/login') }}">Login</a>
+                            <a class="login hidden-xs-down text-uppercase font-weigth-bold" href="{{ url('/login') }}">Logixn</a>
                             
                 @else
                     
@@ -204,7 +212,7 @@
             </div>
             <div class="col-xs-12 col-md-4">
               <img src="CelularesPeru/imagenes/soporte.png"  alt="soporte" class="img-fluid">
-              <h4>Atencion 24h</h4>
+              <h4>Atencion 24ddh</h4>
             </div>
           </div>
         </div>

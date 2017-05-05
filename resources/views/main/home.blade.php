@@ -11,6 +11,10 @@
     <link rel="stylesheet" type="text/css" href="CelularesPeru/css/bootstrap-flex.min.css">
     <link rel="stylesheet" type="text/css" href="CelularesPeru/css/app.css">
     <link rel="stylesheet" type="text/css" href="CelularesPeru/fontawesome/css/font-awesome.css">
+
+    <!-- Nuevas fuentes -->
+    <link rel="stylesheet" href="css/fontsnew/style.css">
+
   </head>
   <body>
     <!--Header-->
@@ -19,15 +23,31 @@
     <header id="header-container">
       <div class="container">
         <div class="row  flex-items-xs-between flex-items-xs-middle">
-            <div class="col-xs-3 ">
-              <h1>CelularesPeru</h1>
+
+            <div class="col-xs-3">
+              <img src="CelularesPeru/imagenes/logo.png" height="55px" alt="calidad">
             </div>
+
              <div class="col-xs-3 text-xs-right">
+
+
+
+              <!-- registrar **andre-->
+                <button class="navbar-toggler  hidden-sm-up" data-toggle="collapse" data-target="#navMenu">&#9776;</button>
+                            <a class="login hidden-xs-down text-uppercase font-weigth-bold" href="{{ url('/login') }}">
+                               <span class=" icon-input-checked-outline">Registrar</a></span>
+
+
+
+
+
+              <!-- Entrar -->
               <button class="navbar-toggler  hidden-sm-up" data-toggle="collapse" data-target="#navMenu">&#9776;</button>
               
                 @if (Auth::guest())
                     
-                            <a class="login hidden-xs-down text-uppercase font-weigth-bold" href="{{ url('/login') }}">Login</a>
+                            <a class="login hidden-xs-down text-uppercase font-weigth-bold" href="{{ url('/login') }}">
+                               <span class="icon-power">Entrar</a></span>
                             
                 @else
                     
@@ -48,8 +68,12 @@
                                     
                             
                 @endif
+
+
+
             </div> 
         </div>
+
       </div>  
     </header>
 
@@ -57,7 +81,7 @@
 
     <!--/Header --> 
 
-    <!--Menu-->
+   <!-- Menu -->
     <div id="menu-container">
       <nav id="navMenu" class="navbar-toggleable-xs navbar navbar-light collapse">
       <div class="container">
@@ -65,27 +89,28 @@
           <div class="col-xs-10 offset-xs-1 col-md-5 offset-md-0">
             <ul class="nav navbar-nav" >
               <li class="nav-item text-xs-center">
-                <a href="{{url('/')}}" class="nav-link active">Home</a>
+                <a href="{{url('/')}}" class="nav-link active"><span class="icon-home-outline">Home</a></span>
               </li>
               <li class="nav-item text-xs-center">
-                <a href="{{url('/catalogo')}}" class="nav-link">Catalogo</a>
+                <a href="{{url('/catalogo')}}" class="nav-link"><span class="icon-news">Catalogo</a></span>
               </li>
 
 
               <li class="nav-item text-xs-center">
-                <a href="{{url('/carrito')}}" class="nav-link">Carrito
+                <a href="{{url('/carrito')}}" class="nav-link"><span class="icon-shopping-cart">Carrito
                 <span>
                   {{$productsCount}}
                 </span>
                 </a>
+                </span>
               </li>
 
 
               <li class="nav-item text-xs-center">
-                <a href="{{url('/nosotros')}}" class="nav-link">Nosotros</a>
+                <a href="{{url('/nosotros')}}" class="nav-link"><span class="icon-group">Nosotros</a></span>
               </li>
               <li class="nav-item text-xs-center">
-                <a href="{{url('/contacto')}}" class="nav-link">Contacto</a>
+                <a href="{{url('/contacto')}}" class="nav-link"><span class="icon-location">Contacto</a></span>
               </li>
               @if (Auth::guest())
               <li class="nav-item text-xs-center hidden-sm-up">
@@ -111,7 +136,7 @@
           <div class="col-xs-12 col-md-6 offset-md-1 hidden-xs-down">
             <form>
               <div class="input-group">
-                <input  type="text" class="form-control" placeholder="¿Encontro lo que buscaba?"></input>
+                <input  type="text" class="form-control" placeholder="¿Qué está buscando?"></input>
                 <span class="input-group-btn">
                   <button class="btn btn-celperu" type="button">
                     <span class="hidden-sm-down">Buscar</span>
@@ -144,7 +169,8 @@
 
     </div>
 
-    
+
+
     <!--/Menu-->
 
     <!--Carousel-->
@@ -154,29 +180,43 @@
             <li data-target="#productosCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#productosCarousel" data-slide-to="1"></li>
             <li data-target="#productosCarousel" data-slide-to="2"></li>
+            <li data-target="#productosCarousel" data-slide-to="3"></li>
           </ol>
           <div class="carousel-inner" role="listbox">
+
             <div class="carousel-item active">
               <img src="CelularesPeru/imagenes/portada1.jpg" alt="Primer producto">
               <div class="carousel-caption">
-                <h3>Bienvenido a CelularesPeru</h3>
-                
+
               </div>
             </div>
+
+
             <div class="carousel-item">
               <img src="CelularesPeru/imagenes/portada2.jpg" alt="Segundo producto">
                <div class="carousel-caption">
-                <h3> Compra ya ! </h3>
-                
-              </div>
+
+               </div>
             </div>
+
             <div class="carousel-item">
-              <img src="CelularesPeru/imagenes/portada3.jpg" alt="Tercer producto">
+               <img src="CelularesPeru/imagenes/portada3.jpg" alt="Tercer producto">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+
+
+
+            <div class="carousel-item">
+              <img src="CelularesPeru/imagenes/portada4.jpg" alt="Cuarto producto">
                <div class="carousel-caption">
-                <h3>Click en Catalogo</h3>
+
                 
               </div>
-            </div>
+
+
+            
           </div>
           <a class="left carousel-control" href="#productosCarousel" role="button" data-slide="prev">
             <span class="icon-prev" aria-hidden="true"></span>
@@ -196,15 +236,15 @@
           <div class="row text-xs-center">
             <div class="col-xs-12 col-md-4">
               <img src="CelularesPeru/imagenes/calidad.png" alt="calidad" class="img-fluid">
-              <h4>Calidad</h4>
+              <h4> Calidad </h4>
             </div>
             <div class="col-xs-12 col-md-4">
               <img src="CelularesPeru/imagenes/envio.png"  alt="envio" class="img-fluid">
-              <h4>Envio </h4>
+              <h4> Envio </h4>
             </div>
             <div class="col-xs-12 col-md-4">
               <img src="CelularesPeru/imagenes/soporte.png"  alt="soporte" class="img-fluid">
-              <h4>Atencion 24h</h4>
+              <h4> Atencion 24h </h4>
             </div>
           </div>
         </div>
@@ -212,44 +252,68 @@
     <!--/Informacion-->
 
     <!--Footer-->
+    
     <footer id="footer-container">
       <div class="container">
         <div class="row text-xs-center text-md-left">
-          <div class="col-md-4">
-            <h4>CelularesPeru<h5>
-            <p>Celular: 987501482</p>
-            <p>Email: celulareperu@gmail.com</p>
-            <p>Visitanos en: </p>
-            <figure>
-              <img src="CelularesPeru/imagenes/redessociales.fw.png" usemap="#Map">
-              <map name="Map">
-              <area shape="rect" coords="-2,2,42,46" href="https://www.facebook.com/" target="_blank">
-              <area shape="rect" coords="66,3,107,39" href="https://www.twitter.com" target="_blank">
-            </figure>
-          </map>
-          </div>
-          <div class="col-md-3 offset-md-5">
-            <h4>Navegacion</h4>
+
+
+
+
+
+      <div class="col-md-4">
+      <h3>Siguenos:</h3>
+      <ul class="redes">
+        <li><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube-square fa-2x"></i></a></li>
+      </ul>
+      <h3>Escribenos: </h3>
+      <i class="fa fa-at" ></i> <a href="#">celulareperu@gmail.com</a>
+    </div>
+
+
+    <div class="col-md-4">
+      <div class="author-info">
+        <br><br><br><p>Copyright © 2005-2017<br>
+           CelularesPerú<br>
+           Todos los derechos reservados. </p>
+      </div>
+    </div>
+
+
+
+          <div class="col-md-4"  style="text-align:right">
             <ul class="nav">
               <li class="nav-item">
-                <a href="index.html" class="nav-link">Home</a>
+                 <a href="{{url('/')}}" class="nav-link active"><span class="icon-home-outline">Home</a></span>
               </li>
+              <br>
               <li class="nav-item">
-                <a href="catalogo.html" class="nav-link">Catalogo</a>
+                <a href="{{url('/catalogo')}}" class="nav-link"><span class="icon-news">Catalogo</a></span>
               </li>
+              <br>
               <li class="nav-item">
-                <a href="#" class="nav-link">Carrito</a>
+                <a href="{{url('/carrito')}}" class="nav-link"><span class="icon-shopping-cart">Carrito</a></span>
               </li>
+              <br>
               <li class="nav-item">
-                <a href="#" class="nav-link">Contacto</a>
+                <a href="{{url('/contacto')}}" class="nav-link"><span class="icon-location">Contacto</a></span>
               </li>
+              <br>
               <li class="nav-item">
-                <a href="login.html" class="nav-link">Login</a>
+                <a href="{{ url('/login') }}" class="nav-link" ><span class="icon-power">Entrar</a></span>
               </li>
+               <br>
             </ul>
           </div>
         </div>
       </div>
+
+
+
+
     </footer>
     <!--/Footer-->
 

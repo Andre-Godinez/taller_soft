@@ -11,23 +11,54 @@
     <link rel="stylesheet" type="text/css" href="{{url('CelularesPeru/css/bootstrap-flex.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url('/CelularesPeru/css/app.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url('/CelularesPeru/fontawesome/css/font-awesome.css ')}}">
+
+
+    <!-- Nuevas fuentes -->
+    <link rel="stylesheet" href="css/fontsnew/style.css">
+
+
+
+
+    <!--  nuevas librerias-->
+
+
+ 
+
+
+
+
+
+
   </head>
   <body>
-     <!--Header-->
-
-
     <header id="header-container">
       <div class="container">
         <div class="row  flex-items-xs-between flex-items-xs-middle">
-            <div class="col-xs-3 ">
-              <h1>CelularesPeru</h1>
+
+            <div class="col-xs-3">
+              <img src="CelularesPeru/imagenes/logo.png" height="55px" alt="calidad">
             </div>
+
              <div class="col-xs-3 text-xs-right">
+
+
+
+              <!-- registrar **andre-->
+                <button class="navbar-toggler  hidden-sm-up" data-toggle="collapse" data-target="#navMenu">&#9776;</button>
+                            <a class="login hidden-xs-down text-uppercase font-weigth-bold" href="{{ url('/login') }}">
+                               <span class=" icon-input-checked-outline">Registrar</a></span>
+
+
+
+
+
+              <!-- Entrar -->
               <button class="navbar-toggler  hidden-sm-up" data-toggle="collapse" data-target="#navMenu">&#9776;</button>
               
                 @if (Auth::guest())
                     
-                            <a class="login hidden-xs-down text-uppercase font-weigth-bold" href="{{ url('/login') }}">Login</a>
+                            <a class="login hidden-xs-down text-uppercase font-weigth-bold" href="{{ url('/login') }}">
+                               <span class="icon-power">Entrar</a></span>
                             
                 @else
                     
@@ -48,12 +79,16 @@
                                     
                             
                 @endif
+
+
+
             </div> 
         </div>
+
       </div>  
     </header>
 
-    <!--Menu-->
+   <!-- Menu -->
     <div id="menu-container">
       <nav id="navMenu" class="navbar-toggleable-xs navbar navbar-light collapse">
       <div class="container">
@@ -61,27 +96,28 @@
           <div class="col-xs-10 offset-xs-1 col-md-5 offset-md-0">
             <ul class="nav navbar-nav" >
               <li class="nav-item text-xs-center">
-                <a href="{{url('/')}}" class="nav-link">Home</a>
+                <a href="{{url('/')}}" class="nav-link active"><span class="icon-home-outline">Home</a></span>
               </li>
               <li class="nav-item text-xs-center">
-                <a href="{{url('/catalogo')}}" class="nav-link">Catalogo</a>
+                <a href="{{url('/catalogo')}}" class="nav-link"><span class="icon-news">Catalogo</a></span>
               </li>
 
 
               <li class="nav-item text-xs-center">
-                <a href="{{url('/carrito')}}" class="nav-link">Carrito
+                <a href="{{url('/carrito')}}" class="nav-link"><span class="icon-shopping-cart">Carrito
                 <span>
                   {{$productsCount}}
                 </span>
                 </a>
+                </span>
               </li>
 
 
               <li class="nav-item text-xs-center">
-                <a href="{{url('/nosotros')}}" class="nav-link active">Nosotros</a>
+                <a href="{{url('/nosotros')}}" class="nav-link"><span class="icon-group">Nosotros</a></span>
               </li>
               <li class="nav-item text-xs-center">
-                <a href="{{url('/contacto')}}" class="nav-link">Contacto</a>
+                <a href="{{url('/contacto')}}" class="nav-link"><span class="icon-location">Contacto</a></span>
               </li>
               @if (Auth::guest())
               <li class="nav-item text-xs-center hidden-sm-up">
@@ -107,7 +143,7 @@
           <div class="col-xs-12 col-md-6 offset-md-1 hidden-xs-down">
             <form>
               <div class="input-group">
-                <input  type="text" class="form-control" placeholder="¿Encontro lo que buscaba?"></input>
+                <input  type="text" class="form-control" placeholder="¿Qué está buscando?"></input>
                 <span class="input-group-btn">
                   <button class="btn btn-celperu" type="button">
                     <span class="hidden-sm-down">Buscar</span>
@@ -139,10 +175,10 @@
       </div>
 
     </div>
-
     
     <!--/Menu-->
     <!--Nosotros-->
+    <!--
     <div id="nosotros-container">
       <div class="container">
       <div class="row">
@@ -176,7 +212,119 @@
       </div>
     </div>
 
+
+
+-->
     <!--/Nosotros-->
+
+
+
+
+    <!--/#page-breadcrumb ANDER-->
+
+    <br><br>
+    <h1><CENTER><b>NOSOTROS<b></CENTER></h1>
+    <br><br>
+
+    <section id="company-information" class="padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+        <div class="container"  style="text-align:center">
+            <div class="row">
+                <div class="col-sm-6">
+                     <img src="{{url('/CelularesPeru/imagenes/nosotros1.jpg')}}" alt="calidad" class="img-fluid">
+                </div>
+                <div class="col-sm-6 padding-top">
+                    <p>Peruvian Nexus es una tienda online de tecnología de vanguardia como tablets, celulares libres de importación
+                        de alta calidad  y siempre disponibles. Somos una empresa dedicada a la venta de equipos celulares de una variedad de gama, nuestro objetivo es ofrecer equipos libres para que no tengan que firmar contratos ni adquirir planes que a la larga les costaria mucho dinero, nuestos equipos los podra usar con cualquier operador y en cualquier pais sin restricciones de ningun tipo</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br><br>
+
+    <section id="services">
+        <div class="container" style="text-align:center">
+            <div class="row">
+                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <div class="single-service">
+                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                             <img src="{{url('/CelularesPeru/imagenes/nosotros2.jpg')}}" alt="calidad" class="img-fluid">
+                        </div>
+                        <h2>Misión</h2>
+                        <p>Vender los mejores productos tecnológicos con respecto a celulares a precios accesibles para la comunidad peruana</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="single-service">
+                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
+                             <img src="{{url('/CelularesPeru/imagenes/nosotros3.jpg')}}" alt="calidad" class="img-fluid">
+                        </div>
+                        <h2>Visión</h2>
+                        <p>Ser una empresa financieramente sana,formada por profesionales capacitados y líder en tendencias de tecnología móvil. </p>
+                    </div>
+                </div>
+                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
+                    <div class="single-service">
+                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
+                             <img src="{{url('/CelularesPeru/imagenes/nosotros4.jpg')}}" alt="calidad" class="img-fluid">
+                        </div>
+                        <h2>Compromiso</h2>
+                        <p>Nuestro pacto incluye tres premisas como socios estratégicos para la búsqueda de tecnología: seriedad, transparencia y trayectoria.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/#services- ANDREEEEEEEEEEEE->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <!--Informacion-->
@@ -200,47 +348,73 @@
       </div>
     <!--/Informacion-->
 
+
     <!--Footer-->
+    
     <footer id="footer-container">
       <div class="container">
         <div class="row text-xs-center text-md-left">
-          <div class="col-md-4">
-            <h4>CelularesPeru<h5>
-            <p>Celular: 987501482</p>
-            <p>Email: celulareperu@gmail.com</p>
-            <p>Visitanos en: </p>
-            <figure>
-              <img src="{{url('/CelularesPeru/imagenes/redessociales.fw.png')}}" usemap="#Map">
-              <map name="Map">
-              <area shape="rect" coords="-2,2,42,46" href="https://www.facebook.com/" target="_blank">
-              <area shape="rect" coords="66,3,107,39" href="https://www.twitter.com" target="_blank">
-            </figure>
-          </map>
-          </div>
-          <div class="col-md-3 offset-md-5">
-            <h4>Navegacion</h4>
+
+
+
+
+
+      <div class="col-md-4">
+      <h3>Siguenos:</h3>
+      <ul class="redes">
+        <li><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube-square fa-2x"></i></a></li>
+      </ul>
+      <h3>Escribenos: </h3>
+      <i class="fa fa-at" ></i> <a href="#">celulareperu@gmail.com</a>
+    </div>
+
+
+    <div class="col-md-4">
+      <div class="author-info">
+        <br><br><br><p>Copyright © 2005-2017<br>
+           CelularesPerú<br>
+           Todos los derechos reservados. </p>
+      </div>
+    </div>
+
+
+
+          <div class="col-md-4"  style="text-align:right">
             <ul class="nav">
               <li class="nav-item">
-                <a href="index.html" class="nav-link">Home</a>
+                 <a href="{{url('/')}}" class="nav-link active"><span class="icon-home-outline">Home</a></span>
               </li>
+              <br>
               <li class="nav-item">
-                <a href="catalogo.html" class="nav-link">Catalogo</a>
+                <a href="{{url('/catalogo')}}" class="nav-link"><span class="icon-news">Catalogo</a></span>
               </li>
+              <br>
               <li class="nav-item">
-                <a href="#" class="nav-link">Carrito</a>
+                <a href="{{url('/carrito')}}" class="nav-link"><span class="icon-shopping-cart">Carrito</a></span>
               </li>
+              <br>
               <li class="nav-item">
-                <a href="#" class="nav-link">Contacto</a>
+                <a href="{{url('/contacto')}}" class="nav-link"><span class="icon-location">Contacto</a></span>
               </li>
+              <br>
               <li class="nav-item">
-                <a href="login.html" class="nav-link">Login</a>
+                <a href="{{ url('/login') }}" class="nav-link" ><span class="icon-power">Entrar</a></span>
               </li>
+               <br>
             </ul>
           </div>
         </div>
       </div>
+
+
+
+
     </footer>
     <!--/Footer-->
+
 
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->

@@ -22,7 +22,7 @@
       <div class="container">
         <div class="row  flex-items-xs-between flex-items-xs-middle">
             <div class="col-xs-3 ">
-              <h1>CelularesPeru</h1>
+              <h1>CelularessPer</h1>
             </div>
              <div class="col-xs-3 text-xs-right">
               <button class="navbar-toggler  hidden-sm-up" data-toggle="collapse" data-target="#navMenu">&#9776;</button>
